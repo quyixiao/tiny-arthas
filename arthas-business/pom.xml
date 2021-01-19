@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~    Copyright (c) 2018-2025, songfayuan All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without
+  ~ modification, are permitted provided that the following conditions are met:
+  ~
+  ~ Redistributions of source code must retain the above copyright notice,
+  ~ this list of conditions and the following disclaimer.
+  ~ Redistributions in binary form must reproduce the above copyright
+  ~ notice, this list of conditions and the following disclaimer in the
+  ~ documentation and/or other materials provided with the distribution.
+  ~ Neither the name of the 霖梓控股 developer nor the names of its
+  ~ contributors may be used to endorse or promote products derived from
+  ~ this software without specific prior written permission.
+  ~ Author: songfayuan (1414798079@qq.com)
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.arthas</groupId>
+    <artifactId>arthas-business</artifactId>
+    <version>1.1.6</version>
+    <packaging>jar</packaging>
+
+    <name>arthas-business</name>
+    <description>business</description>
+
+    <parent>
+        <groupId>com.arthas</groupId>
+        <artifactId>tiny-arthas</artifactId>
+        <version>1.1.6-SNAPSHOT</version>
+    </parent>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.jcabi</groupId>
+            <artifactId>jcabi-ssh</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>18.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <!-- 分页组件结束 -->
+        <dependency>
+            <groupId>tool</groupId>
+            <artifactId>common-util</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.46</version>
+        </dependency>
+
+
+
+    </dependencies>
+
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <!-- eclipse plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-eclipse-plugin</artifactId>
+            </plugin>
+
+            <!-- source attach plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <forkMode>once</forkMode>
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
+                    <systemProperties>
+                        <property>
+                            <name>net.sourceforge.cobertura.datafile</name>
+                            <value>target/cobertura/cobertura.ser</value>
+                        </property>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <forkMode>once</forkMode>
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
+                    <systemProperties>
+                        <property>
+                            <name>net.sourceforge.cobertura.datafile</name>
+                            <value>target/cobertura/cobertura.ser</value>
+                        </property>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

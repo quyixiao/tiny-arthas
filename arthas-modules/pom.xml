@@ -1,0 +1,53 @@
+<!--
+  ~    Copyright (c) 2018-2025, songfayuan All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without
+  ~ modification, are permitted provided that the following conditions are met:
+  ~
+  ~ Redistributions of source code must retain the above copyright notice,
+  ~ this list of conditions and the following disclaimer.
+  ~ Redistributions in binary form must reproduce the above copyright
+  ~ notice, this list of conditions and the following disclaimer in the
+  ~ documentation and/or other materials provided with the distribution.
+  ~ Neither the name of the 霖梓控股 developer nor the names of its
+  ~ contributors may be used to endorse or promote products derived from
+  ~ this software without specific prior written permission.
+  ~ Author: songfayuan (1414798079@qq.com)
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.arthas</groupId>
+    <artifactId>arthas-modules</artifactId>
+    <version>1.1.6</version>
+    <packaging>pom</packaging>
+
+    <name>arthas-modules</name>
+    <url>http://maven.apache.org</url>
+
+    <parent>
+        <groupId>com.arthas</groupId>
+        <artifactId>tiny-arthas</artifactId>
+        <version>1.1.6-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+
+    </dependencies>
+
+    <modules>
+        <module>arthas-boot</module>
+        <module>arthas-demo</module>
+        <module>arthas-core</module>
+        <module>arthas-agent</module>
+        <module>arthas-service</module>
+        <module>arthas-spy</module>
+    </modules>
+
+</project>
